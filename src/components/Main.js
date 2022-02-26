@@ -1,5 +1,14 @@
+import Carousel from "./Carousel";
+import Lists from "./Lists";
+
 const Main = () => {
-  return <h2>Main</h2>;
+  return (
+    <div>
+      <h2>Main</h2>
+      <Carousel />
+      <Lists />
+    </div>
+  );
 };
 
 export default Main;
