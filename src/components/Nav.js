@@ -10,7 +10,7 @@ import Button from "@mui/material/Button";
 const Nav = () => {
   return (
     <Box>
-      <AppBar position="static" sx={{ bgcolor: "black" }}>
+      <AppBar position="static" sx={{ bgcolor: "#282828" }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -21,21 +21,38 @@ const Nav = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, m: 3 }}>
             Buscador de películas
           </Typography>
 
-          <Button>
-            <Link to="/">Home</Link>
+          <Button sx={{ mr: 3 }}>
+            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+              Home
+            </Link>
           </Button>
-          <Button>
-            <Link to="/new-movies">Ultimos Lanzamientos</Link>
+          <Button sx={{ mr: 3 }}>
+            <Link
+              to="/new-movies"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Ultimos Lanzamientos
+            </Link>
           </Button>
-          <Button>
-            <Link to="/popular">Populares</Link>
+          <Button sx={{ mr: 3 }}>
+            <Link
+              to="/popular"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Populares
+            </Link>
           </Button>
-          <Button>
-            <Link to="/search">Buscar </Link>
+          <Button sx={{ mr: 3 }}>
+            <Link
+              to="/search"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Buscar
+            </Link>
           </Button>
         </Toolbar>
       </AppBar>
