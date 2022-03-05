@@ -8,9 +8,10 @@ const Main = () => {
     <Box>
       <h2>Main</h2>
       <Carousel />
-
-      <Lists title="Películas populares" url="popular" />
-      <Lists title="Películas mejor puntuadas" url="top_rated" />
+      <Box sx={{ display: "flex", justifyContent: " space-evenly" }}>
+        <Lists title="Películas populares" url="popular" />
+        <Lists title="Películas mejor puntuadas" url="top_rated" />
+      </Box>
     </Box>
   );
 };

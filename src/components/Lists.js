@@ -16,8 +16,19 @@ const Lists = ({ title, url }) => {
   }, []);
 
   return (
-    <Box>
-      <Typography variant="h4" gutterBottom>
+    <Box
+      sx={{
+        textAlign: "center",
+        border: "1px solid #282828",
+        height: "450px",
+        overflowY: "scroll",
+      }}
+    >
+      <Typography
+        variant="h5"
+        gutterBottom
+        sx={{ bgcolor: "#282828", color: "white", p: 1 }}
+      >
         {title}
       </Typography>
 
