@@ -25,12 +25,34 @@ const Nav = () => {
             Buscador de películas
           </Typography>
 
-          <Button sx={{ mr: 3 }}>
-            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          <Button
+            sx={{
+              mr: 3,
+              ":hover": {
+                bgcolor: "#1e1d1dde",
+                py: "15px",
+              },
+            }}
+          >
+            <Link
+              to="/"
+              style={{
+                textDecoration: "none",
+                color: "white",
+              }}
+            >
               Home
             </Link>
           </Button>
-          <Button sx={{ mr: 3 }}>
+          <Button
+            sx={{
+              mr: 3,
+              ":hover": {
+                bgcolor: "#1e1d1dde",
+                py: "15px",
+              },
+            }}
+          >
             <Link
               to="/new-movies"
               style={{ textDecoration: "none", color: "white" }}
@@ -38,7 +60,15 @@ const Nav = () => {
               Ultimos Lanzamientos
             </Link>
           </Button>
-          <Button sx={{ mr: 3 }}>
+          <Button
+            sx={{
+              mr: 3,
+              ":hover": {
+                bgcolor: "#1e1d1dde",
+                py: "15px",
+              },
+            }}
+          >
             <Link
               to="/popular"
               style={{ textDecoration: "none", color: "white" }}
@@ -46,7 +76,15 @@ const Nav = () => {
               Populares
             </Link>
           </Button>
-          <Button sx={{ mr: 3 }}>
+          <Button
+            sx={{
+              mr: 3,
+              ":hover": {
+                bgcolor: "#1e1d1dde",
+                py: "15px",
+              },
+            }}
+          >
             <Link
               to="/search"
               style={{ textDecoration: "none", color: "white" }}
