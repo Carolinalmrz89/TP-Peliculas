@@ -1,7 +1,9 @@
-const MovieCard = () => {
+const MovieCard = ({ image, title, url }) => {
   return (
     <div>
-      <h3>Movie card</h3>
+      <img src={image} />
+      <p>{title}</p>
+      <a href={url}> {">"} </a>
     </div>
   );
 };

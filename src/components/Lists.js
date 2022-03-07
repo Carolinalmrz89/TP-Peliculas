@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import ListMovieItem from "./ListMovieItem";
 
 const Lists = ({ title, url }) => {
-  const urlBase = "https://api.themoviedb.org/3/movie/";
-  const apiKey = "0a68557b9bafe8081e017b64d2ebdb4e";
+  let urlBase = "https://api.themoviedb.org/3/movie/";
+  let apiKey = "0a68557b9bafe8081e017b64d2ebdb4e";
 
   const [movies, setMovies] = useState([]);
 
