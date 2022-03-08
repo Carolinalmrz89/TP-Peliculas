@@ -1,10 +1,10 @@
-import MovieCard from "./MovieCard";
+import SectionsPopularLatest from "./SectionsPopularLatest";
 
 const NewMovies = () => {
   return (
     <div>
       <h2>New Movies</h2>
-      <MovieCard />
+      <SectionsPopularLatest title="Últimos lanzamientos" url="now_playing" />
     </div>
   );
 };
