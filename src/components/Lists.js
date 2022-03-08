@@ -34,7 +34,7 @@ const Lists = ({ title, url }) => {
         <ListMovieItem
           image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
           title={movie.title}
-          link={movie.id}
+          link={`/movie-detail/${movie.id}`}
         />
       ))}
     </Box>

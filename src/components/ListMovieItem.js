@@ -4,6 +4,7 @@ import Stack from "@mui/material/Stack";
 import IconButton from "@mui/material/IconButton";
 import SendIcon from "@mui/icons-material/Send";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 
 const ListMovieItem = ({ image, title, link }) => {
   return (
@@ -16,19 +17,20 @@ const ListMovieItem = ({ image, title, link }) => {
           </Typography>
         </Box>
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <IconButton
-            aria-label={link}
-            size="small"
-            sx={{
-              ml: 4,
-              ":hover": {
-                color: "#282828",
-                bgcolor: "transparent",
-              },
-            }}
-          >
-            <SendIcon fontSize="inherit" />
-          </IconButton>
+          <Link to={link}>
+            <IconButton
+              size="small"
+              sx={{
+                ml: 4,
+                ":hover": {
+                  color: "#282828",
+                  bgcolor: "transparent",
+                },
+              }}
+            >
+              <SendIcon fontSize="inherit" />
+            </IconButton>
+          </Link>
         </Box>
       </Stack>
     </Box>
