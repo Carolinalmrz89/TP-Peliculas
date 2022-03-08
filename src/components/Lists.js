@@ -2,11 +2,9 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useState, useEffect } from "react";
 import ListMovieItem from "./ListMovieItem";
+import { urlBase, apiKey } from "../auxiliaries/Auxiliaries";
 
 const Lists = ({ title, url }) => {
-  let urlBase = "https://api.themoviedb.org/3/movie/";
-  let apiKey = "0a68557b9bafe8081e017b64d2ebdb4e";
-
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {

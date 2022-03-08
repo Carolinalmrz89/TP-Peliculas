@@ -4,7 +4,7 @@ const NewMovies = () => {
   return (
     <div>
       <h2>New Movies</h2>
-      {/* <SectionsPopularLatest title="Últimos lanzamientos" url="latest" /> */}
+      <SectionsPopularLatest title="Últimos lanzamientos" url="now_playing" />
     </div>
   );
 };

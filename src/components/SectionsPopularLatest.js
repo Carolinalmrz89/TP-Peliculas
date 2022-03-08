@@ -2,18 +2,17 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
+import { urlBase, apiKey } from "../auxiliaries/Auxiliaries";
 
 const SectionsPopularLatest = ({ title, url }) => {
-  let urlBase = "https://api.themoviedb.org/3/movie/";
-  let apiKey = "0a68557b9bafe8081e017b64d2ebdb4e";
-
   const [movies, setMovies] = useState([]);
-  const [latestMovies, setLatestMovies] = useState([]);
 
   useEffect(() => {
-    fetch(`${urlBase}${url}?api_key=${apiKey}&page=1`)
+    fetch(`${urlBase}${url}?api_key=${apiKey}`)
       .then((res) => res.json())
-      .then((data) => setMovies(data.results));
+      .then((data) => {
+        setMovies(data.results);
+      });
   }, []);
 
   return (
