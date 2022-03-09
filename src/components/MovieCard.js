@@ -13,15 +13,15 @@ const MovieCard = ({ image, title, link }) => {
     <Link to={link} style={{ textDecoration: "none" }}>
       <Card
         sx={{
-          width: 260,
-          height: 460,
+          width: 250,
+          height: 450,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           m: 0.5,
-          mb: 2,
+          mb: 4,
           boxShadow: "none",
-          border: "1px solid #d8d8d8",
+          border: "1px solid #adadad",
           ":hover": {
             boxShadow:
               " 0px 5px 1px -1px rgb(0 0 0 / 12%), 0px 1px 1px 0px rgb(0 0 0 / 18%), 0px 1px 3px 0px rgb(0 0 0 / 12%);",
@@ -61,7 +61,7 @@ const MovieCard = ({ image, title, link }) => {
                 },
               }}
             >
-              <ArrowForwardIosOutlinedIcon sx={{ width: "20px" }} />
+              <ArrowForwardIosOutlinedIcon sx={{ width: "16px" }} />
             </IconButton>
           </Link>
         </CardActions>
