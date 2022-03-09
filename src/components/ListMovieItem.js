@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import IconButton from "@mui/material/IconButton";
-import SendIcon from "@mui/icons-material/Send";
+import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 
@@ -28,7 +28,7 @@ const ListMovieItem = ({ image, title, link }) => {
                 },
               }}
             >
-              <SendIcon fontSize="inherit" />
+              <ArrowForwardIosOutlinedIcon sx={{ width: "16px" }} />
             </IconButton>
           </Link>
         </Box>
