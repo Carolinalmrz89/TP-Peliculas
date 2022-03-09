@@ -20,22 +20,24 @@ const SectionsPopularLatest = ({ title, url }) => {
       sx={{
         display: "flex",
         flexDirection: "column",
+        alignItems: "center",
       }}
     >
-      <Typography variant="h5" gutterBottom sx={{ p: 1 }}>
+      <Typography variant="h5" gutterBottom sx={{ p: 3, fontWeight: "bold" }}>
         {title}
       </Typography>
       <Box
         sx={{
           display: "flex",
           flexWrap: "wrap",
+          justifyContent: "center",
         }}
       >
         {movies.map((movie) => (
           <MovieCard
-            image={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
+            image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
             title={movie.title}
-            url={movie.id}
+            link={`/movie-detail/${movie.id}`}
           />
         ))}
       </Box>
