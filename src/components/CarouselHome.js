@@ -23,12 +23,15 @@ const CarouselHome = () => {
       interval={5000}
     >
       {movies.map((movie) => (
-        <Box>
-          <Paper>
-            <h2>{movie.title}</h2>
-            <p>{movie.overview}</p>
-          </Paper>
-        </Box>
+        <Paper
+          style={{
+            backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.poster_path})`,
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <h2>{movie.title}</h2>
+          <p>{movie.overview}</p>
+        </Paper>
       ))}
     </Carousel>
   );
