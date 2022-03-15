@@ -21,12 +21,17 @@ const CarouselHome = () => {
       animation="slide"
       navButtonsAlwaysInvisible={true}
       interval={5000}
+      sx={{ mb: 6 }}
     >
       {movies.map((movie) => (
         <Paper
-          style={{
+          sx={{
             backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.poster_path})`,
             backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            zIndex: "-20",
+            backgroundPosition: "50% 50%",
+            height: "400px",
           }}
         >
           <h2>{movie.title}</h2>
