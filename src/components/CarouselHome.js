@@ -1,9 +1,10 @@
 import React from "react";
-import Carousel from "react-material-ui-carousel";
-import { Paper } from "@mui/material";
 import { useEffect, useState } from "react";
 import { urlBase, apiKey } from "../auxiliaries/Auxiliaries";
+import Carousel from "react-material-ui-carousel";
+import { Paper } from "@mui/material";
 import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 const CarouselHome = () => {
   const [movies, setMovies] = useState([]);
@@ -26,16 +27,36 @@ const CarouselHome = () => {
       {movies.map((movie) => (
         <Paper
           sx={{
-            backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.poster_path})`,
+            backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            zIndex: "-20",
-            backgroundPosition: "50% 50%",
+            backgroundPosition: "50% 30%",
+            opacity: 2.5,
             height: "400px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          <h2>{movie.title}</h2>
-          <p>{movie.overview}</p>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              width: "100%",
+              px: 28,
+              py: 3,
+              bgcolor: "#000000b0",
+              color: "white",
+              fontWeight: "bold",
+              textAlign: "center",
+            }}
+          >
+            <Typography variant="h5" gutterBottom>
+              {movie.title}
+            </Typography>
+            <Typography variant="body1">{movie.overview}</Typography>
+          </Box>
         </Paper>
       ))}
     </Carousel>
