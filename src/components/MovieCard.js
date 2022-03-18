@@ -50,6 +50,7 @@ const MovieCard = ({ image, title, link }) => {
             {title}
           </Typography>
         </CardContent>
+
         <CardActions sx={{ p: 0 }}>
           <Link to={link}>
             <IconButton
