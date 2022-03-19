@@ -10,7 +10,7 @@ import Button from "@mui/material/Button";
 const Nav = () => {
   return (
     <Box>
-      <AppBar position="static" sx={{ bgcolor: "#282828" }}>
+      <AppBar position="static" sx={{ bgcolor: "#282828", height: "10vh" }}>
         <Toolbar>
           <IconButton
             size="large"
