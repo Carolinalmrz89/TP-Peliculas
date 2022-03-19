@@ -15,7 +15,9 @@ const MovieDetail = () => {
   useEffect(() => {
     fetch(`${urlBase}${params.idMovie}?api_key=${apiKey}`)
       .then((res) => res.json())
-      .then((data) => setMovieDetail(data));
+      .then((data) => {
+        setMovieDetail(data);
+      });
   }, []);
 
   return (
@@ -28,32 +30,53 @@ const MovieDetail = () => {
       }}
     >
       <Card
+        key={movieDetail.id}
         sx={{
           height: "90vh",
           bgcolor: "#000000b0",
           display: "flex",
           alignItems: "center",
-          pl: 10,
+          px: 10,
         }}
       >
-        <Box sx={{ display: "flex", width: "700px" }}>
-          <CardMedia
-            component="img"
-            sx={{ width: "300px", height: "400px" }}
-            image={`https://image.tmdb.org/t/p/original/${movieDetail.poster_path}`}
-          />
-          <CardContent sx={{ flex: "1 0 auto", width: "100%" }}>
+        <Box sx={{ display: "flex" }}>
+          <Box>
+            <CardMedia
+              component="img"
+              sx={{ width: "300px", height: "400px" }}
+              image={`https://image.tmdb.org/t/p/original/${movieDetail.poster_path}`}
+            />
+          </Box>
+          <CardContent>
             <Box sx={{ display: "flex", alignItems: "flex-end" }}>
-              <Typography variant="h4" color="white">
+              <Typography
+                variant="h4"
+                color="white"
+                sx={{ lineHeight: "initial" }}
+              >
                 {movieDetail.title}{" "}
               </Typography>
-              <Typography variant="h5" color="grey">
+              <Typography
+                variant="h5"
+                sx={{ color: "#acacac", fontWeight: 600, pl: 2 }}
+              >
                 {movieDetail.release_date}
               </Typography>
             </Box>
-            <Typography variant="subtitle1" color="white">
+            <Typography
+              variant="subtitle1"
+              color="white"
+              sx={{ pt: 3, textAlign: "justify", fontWeight: 600 }}
+            >
               {movieDetail.overview}
             </Typography>
+            {/* <Typography
+              variant="subtitle1"
+              color="white"
+              sx={{ pt: 3, textAlign: "justify", fontWeight: 600 }}
+            >
+              {movieDetail.genres}
+            </Typography> */}
           </CardContent>
         </Box>
       </Card>

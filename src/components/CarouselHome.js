@@ -55,7 +55,9 @@ const CarouselHome = () => {
             <Typography variant="h5" gutterBottom>
               {movie.title}
             </Typography>
-            <Typography variant="body1">{movie.overview}</Typography>
+            <Typography variant="body1" sx={{ textAlign: "justify" }}>
+              {movie.overview}
+            </Typography>
           </Box>
         </Paper>
       ))}
