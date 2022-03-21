@@ -36,7 +36,7 @@ const MovieDetail = () => {
           bgcolor: "#000000b0",
           display: "flex",
           alignItems: "center",
-          px: 10,
+          px: 16,
         }}
       >
         <Box sx={{ display: "flex" }}>
@@ -47,7 +47,7 @@ const MovieDetail = () => {
               image={`https://image.tmdb.org/t/p/original/${movieDetail.poster_path}`}
             />
           </Box>
-          <CardContent>
+          <CardContent sx={{ ml: 6 }}>
             <Box sx={{ display: "flex", alignItems: "flex-end" }}>
               <Typography
                 variant="h4"
@@ -70,13 +70,6 @@ const MovieDetail = () => {
             >
               {movieDetail.overview}
             </Typography>
-            {/* <Typography
-              variant="subtitle1"
-              color="white"
-              sx={{ pt: 3, textAlign: "justify", fontWeight: 600 }}
-            >
-              {movieDetail.genres}
-            </Typography> */}
           </CardContent>
         </Box>
       </Card>
