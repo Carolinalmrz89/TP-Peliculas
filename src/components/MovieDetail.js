@@ -23,17 +23,18 @@ const MovieDetail = () => {
   return (
     <Box
       sx={{
-        backgroundImage: `url(https://image.tmdb.org/t/p/original/${movieDetail.backdrop_path})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://image.tmdb.org/t/p/original/${movieDetail.backdrop_path})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         height: "90vh",
+        display: "flex",
       }}
     >
       <Card
         key={movieDetail.id}
         sx={{
-          height: "90vh",
-          bgcolor: "#000000b0",
+          bgcolor: "transparent",
+          boxShadow: "none",
           display: "flex",
           alignItems: "center",
           px: 16,
@@ -60,7 +61,8 @@ const MovieDetail = () => {
                 variant="h5"
                 sx={{ color: "#acacac", fontWeight: 600, pl: 2 }}
               >
-                {movieDetail.release_date}
+                {movieDetail.release_date &&
+                  movieDetail.release_date.slice(0, 4)}
               </Typography>
             </Box>
             <Typography
@@ -70,6 +72,17 @@ const MovieDetail = () => {
             >
               {movieDetail.overview}
             </Typography>
+
+            {movieDetail.genres &&
+              movieDetail.genres.map((genre) => (
+                <Typography
+                  variant="subtitle1"
+                  color="white"
+                  sx={{ pt: 3, textAlign: "justify", fontWeight: 600 }}
+                >
+                  {genre.name}
+                </Typography>
+              ))}
           </CardContent>
         </Box>
       </Card>
