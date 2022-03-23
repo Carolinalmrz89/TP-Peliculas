@@ -1,10 +1,14 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { urlBase, apiKey } from "../auxiliaries/Auxiliaries";
 import Carousel from "react-material-ui-carousel";
 import { Paper } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
+import Button from "@mui/material/Button";
 
 const CarouselHome = () => {
   const [movies, setMovies] = useState([]);
@@ -43,6 +47,7 @@ const CarouselHome = () => {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
+              alignItems: "center",
               width: "100%",
               px: 28,
               py: 3,
@@ -58,6 +63,41 @@ const CarouselHome = () => {
             <Typography variant="body1" sx={{ textAlign: "justify" }}>
               {movie.overview}
             </Typography>
+
+            <Button
+              sx={{
+                mt: 4,
+                width: "190px",
+                ":hover": {
+                  bgcolor: "transparent",
+                },
+              }}
+            >
+              <Link
+                to={`/movie-detail/${movie.id}`}
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                <IconButton
+                  size="small"
+                  sx={{
+                    ml: 4,
+                    color: "white",
+                    fontSize: "16px",
+                    ":hover": {
+                      bgcolor: "transparent",
+                    },
+                  }}
+                >
+                  More info{" "}
+                  <ArrowForwardIosOutlinedIcon
+                    sx={{ width: "12px", color: "white", pl: 2 }}
+                  />
+                </IconButton>
+              </Link>
+            </Button>
           </Box>
         </Paper>
       ))}
