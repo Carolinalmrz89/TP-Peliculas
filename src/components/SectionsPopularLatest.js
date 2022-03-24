@@ -10,6 +10,7 @@ import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutl
 const SectionsPopularLatest = ({ title, url }) => {
   const [movies, setMovies] = useState([]);
   const [pageNumber, setPageNumber] = useState(1);
+  const [totalPages, setTotalPages] = useState([]);
 
   const handleClickPrevPage = () => {
     setPageNumber(pageNumber - 1);
@@ -26,6 +27,7 @@ const SectionsPopularLatest = ({ title, url }) => {
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results);
+        setTotalPages(data.total_pages);
       });
   }, [pageNumber]);
 
@@ -56,28 +58,21 @@ const SectionsPopularLatest = ({ title, url }) => {
         ))}
       </Box>
       <Box sx={{ display: "flex" }}>
-        {pageNumber == 1 ? (
-          <Button
-            disabled
-            startIcon={<ArrowBackIosNewOutlinedIcon />}
-            sx={{ my: 2, mr: 3 }}
-          ></Button>
-        ) : (
-          <Button
-            startIcon={<ArrowBackIosNewOutlinedIcon />}
-            onClick={handleClickPrevPage}
-            sx={{
-              my: 2,
-              mr: 3,
-              color: mainColor,
-              ":hover": {
-                bgcolor: mainColor,
-                border: `1px solid ${mainColor}`,
-                color: "white",
-              },
-            }}
-          ></Button>
-        )}
+        <Button
+          startIcon={<ArrowBackIosNewOutlinedIcon />}
+          onClick={handleClickPrevPage}
+          disabled={pageNumber === 1}
+          sx={{
+            my: 2,
+            mr: 3,
+            color: mainColor,
+            ":hover": {
+              bgcolor: mainColor,
+              border: `1px solid ${mainColor}`,
+              color: "white",
+            },
+          }}
+        ></Button>
 
         <Typography
           variant="h6"
@@ -89,6 +84,7 @@ const SectionsPopularLatest = ({ title, url }) => {
         <Button
           endIcon={<ArrowForwardIosOutlinedIcon />}
           onClick={handleClickNextPage}
+          disabled={pageNumber === totalPages}
           sx={{
             my: 2,
             ml: 3,
