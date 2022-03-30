@@ -18,8 +18,6 @@ const Lists = ({ title, url }) => {
       sx={{
         textAlign: "center",
         border: "1px solid #282828",
-        height: "450px",
-        overflowY: "scroll",
       }}
     >
       <Typography
@@ -30,13 +28,20 @@ const Lists = ({ title, url }) => {
         {title}
       </Typography>
 
-      {movies.map((movie) => (
-        <ListMovieItem
-          image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-          title={movie.title}
-          link={`/movie-detail/${movie.id}`}
-        />
-      ))}
+      <Box
+        sx={{
+          height: "400px",
+          overflowY: "scroll",
+        }}
+      >
+        {movies.map((movie) => (
+          <ListMovieItem
+            image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+            title={movie.title}
+            link={`/movie-detail/${movie.id}`}
+          />
+        ))}
+      </Box>
     </Box>
   );
 };

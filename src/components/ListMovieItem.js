@@ -5,19 +5,31 @@ import IconButton from "@mui/material/IconButton";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
+import { mainColor } from "../auxiliaries/Auxiliaries";
 
 const ListMovieItem = ({ image, title, link }) => {
   return (
-    <Box>
-      <Stack direction="row" justifyContent="space-between" width="450px" m={2}>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Avatar alt="Remy Sharp" src={image} />
-          <Typography variant="subtitle1" ml={2}>
-            {title}
-          </Typography>
-        </Box>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Link to={link}>
+    <Link
+      to={link}
+      style={{
+        textDecoration: "none",
+        color: mainColor,
+      }}
+    >
+      <Box>
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          width="450px"
+          m={2}
+        >
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Avatar alt="Remy Sharp" src={image} />
+            <Typography variant="subtitle1" ml={2}>
+              {title}
+            </Typography>
+          </Box>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
             <IconButton
               size="small"
               sx={{
@@ -30,10 +42,10 @@ const ListMovieItem = ({ image, title, link }) => {
             >
               <ArrowForwardIosOutlinedIcon sx={{ width: "16px" }} />
             </IconButton>
-          </Link>
-        </Box>
-      </Stack>
-    </Box>
+          </Box>
+        </Stack>
+      </Box>
+    </Link>
   );
 };
 
