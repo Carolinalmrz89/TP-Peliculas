@@ -6,24 +6,28 @@ import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+import Rating from "@mui/material/Rating";
 
 const MovieDetail = () => {
   const params = useParams();
 
   const [movieDetail, setMovieDetail] = useState([]);
 
+  const [vote, setVote] = useState(0);
+
   useEffect(() => {
     fetch(`${urlBase}${params.idMovie}?api_key=${apiKey}`)
       .then((res) => res.json())
       .then((data) => {
         setMovieDetail(data);
+        setVote(data);
       });
   }, []);
 
   return (
     <Box
       sx={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://image.tmdb.org/t/p/original/${movieDetail.backdrop_path})`,
+        backgroundImage: `linear-gradient(rgb(0 0 0 / 66%), rgba(0, 0, 0, 0.5)), url(https://image.tmdb.org/t/p/original/${movieDetail.backdrop_path})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         height: "90vh",
@@ -40,7 +44,7 @@ const MovieDetail = () => {
           px: 16,
         }}
       >
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
           <Box>
             <CardMedia
               component="img"
@@ -73,16 +77,48 @@ const MovieDetail = () => {
               {movieDetail.overview}
             </Typography>
 
-            {movieDetail.genres &&
-              movieDetail.genres.map((genre) => (
-                <Typography
-                  variant="subtitle1"
-                  color="white"
-                  sx={{ pt: 3, textAlign: "justify", fontWeight: 600 }}
-                >
-                  {genre.name}
-                </Typography>
-              ))}
+            <Box>
+              <Typography variant="h6" color="white" sx={{ pt: 3 }}>
+                Genres:
+              </Typography>
+              <Box sx={{ display: "flex", flexWrap: "wrap" }}>
+                {movieDetail.genres &&
+                  movieDetail.genres.map((genre) => (
+                    <Typography
+                      variant="subtitle1"
+                      color="white"
+                      sx={{
+                        fontSize: "14px",
+                        px: "8px",
+                        py: "4px",
+                        textAlign: "justify",
+                        fontWeight: 600,
+                        border: "1px solid gray",
+                        mr: "10px",
+                        mt: "10px",
+                        borderRadius: "5px",
+                        border: "1px solid #acacac",
+                        backgroundColor: "#0000009e",
+                      }}
+                    >
+                      {genre.name}
+                    </Typography>
+                  ))}
+              </Box>
+            </Box>
+            <Box sx={{ display: "flex", flexDirection: "column" }}>
+              <Typography variant="h6" color="white" sx={{ pt: 3 }}>
+                Rating:
+              </Typography>
+              <Rating
+                name="read-only"
+                value={vote && vote.vote_average / 2}
+                readOnly
+                color="yellow"
+                sx={{ mt: 1 }}
+              />
+              <Typography color="white">{movieDetail.vote_average} </Typography>
+            </Box>
           </CardContent>
         </Box>
       </Card>
