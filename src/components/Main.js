@@ -7,7 +7,7 @@ const Main = () => {
   return (
     <Box>
       <CarouselHome />
-      <Box sx={{ display: "flex", justifyContent: " space-evenly" }}>
+      <Box sx={{ display: "flex", justifyContent: " space-evenly", pb: 6 }}>
         <Lists title="Películas populares" url="popular" />
         <Lists title="Películas mejor puntuadas" url="top_rated" />
       </Box>
