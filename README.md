@@ -3,7 +3,7 @@
 
 # ✦ Proyecto: ****
 
-Proyecto final del Bootcamp de Desarrollo Web Front End, dictado por AdaITW. La propuesta consiste en crear una aplicación que permita listar información sobre películas, comunicándote con la API themoviedatabase.
+Proyecto final del Bootcamp de Desarrollo Web Front End, dictado por AdaITW. La propuesta consiste en crear una aplicación que permita listar información sobre películas, comunicándote con la API https://api.themoviedb.org/3/movie/ 
 
 ---
 
@@ -37,7 +37,7 @@ Proyecto final del Bootcamp de Desarrollo Web Front End, dictado por AdaITW. La 
 - Deploy en NETLIFY
 
 ## Recursos:
-- API: 
+- API: https://api.themoviedb.org/3/movie/
 
 ---
 
