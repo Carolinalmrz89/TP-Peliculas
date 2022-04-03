@@ -3,16 +3,15 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
+import ResponsiveMenu from "./ResponsiveMenu";
 
 const Nav = () => {
   return (
     <Box>
       <AppBar position="static" sx={{ bgcolor: "#282828", height: "10vh" }}>
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             size="large"
             edge="start"
             color="inherit"
@@ -20,78 +19,98 @@ const Nav = () => {
             sx={{ mr: 2 }}
           >
             <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, m: 3 }}>
+          </IconButton> */}
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Buscador de películas
           </Typography>
 
-          <Button
+          <Box
             sx={{
-              mr: 3,
-              ":hover": {
-                bgcolor: "#1e1d1dde",
-                py: "15px",
+              display: {
+                xs: "none",
+                md: "inline",
               },
             }}
           >
-            <Link
-              to="/"
-              style={{
-                textDecoration: "none",
-                color: "white",
+            <Button
+              sx={{
+                mr: 3,
+                ":hover": {
+                  bgcolor: "#1e1d1dde",
+                  py: "15px",
+                },
               }}
             >
-              Home
-            </Link>
-          </Button>
-          <Button
+              <Link
+                to="/"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+              >
+                Home
+              </Link>
+            </Button>
+            <Button
+              sx={{
+                mr: 3,
+                ":hover": {
+                  bgcolor: "#1e1d1dde",
+                  py: "15px",
+                },
+              }}
+            >
+              <Link
+                to="/new-movies"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Ultimos Lanzamientos
+              </Link>
+            </Button>
+            <Button
+              sx={{
+                mr: 3,
+                ":hover": {
+                  bgcolor: "#1e1d1dde",
+                  py: "15px",
+                },
+              }}
+            >
+              <Link
+                to="/popular"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Populares
+              </Link>
+            </Button>
+            <Button
+              sx={{
+                mr: 3,
+                ":hover": {
+                  bgcolor: "#1e1d1dde",
+                  py: "15px",
+                },
+              }}
+            >
+              <Link
+                to="/search"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Buscar
+              </Link>
+            </Button>
+          </Box>
+
+          <Box
             sx={{
-              mr: 3,
-              ":hover": {
-                bgcolor: "#1e1d1dde",
-                py: "15px",
+              display: {
+                xs: "inline",
+                md: "none",
               },
             }}
           >
-            <Link
-              to="/new-movies"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Ultimos Lanzamientos
-            </Link>
-          </Button>
-          <Button
-            sx={{
-              mr: 3,
-              ":hover": {
-                bgcolor: "#1e1d1dde",
-                py: "15px",
-              },
-            }}
-          >
-            <Link
-              to="/popular"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Populares
-            </Link>
-          </Button>
-          <Button
-            sx={{
-              mr: 3,
-              ":hover": {
-                bgcolor: "#1e1d1dde",
-                py: "15px",
-              },
-            }}
-          >
-            <Link
-              to="/search"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Buscar
-            </Link>
-          </Button>
+            <ResponsiveMenu />
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
