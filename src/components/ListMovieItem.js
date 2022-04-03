@@ -17,15 +17,29 @@ const ListMovieItem = ({ image, title, link }) => {
       }}
     >
       <Box>
-        <Stack
-          direction="row"
-          justifyContent="space-between"
-          width="450px"
-          m={2}
-        >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Stack direction="row" justifyContent="space-between" m={2}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              width: {
+                xs: "80%",
+                sm: "85%",
+                md: "80%",
+                lg: "85%",
+              },
+            }}
+          >
             <Avatar alt="Remy Sharp" src={image} />
-            <Typography variant="subtitle1" ml={2}>
+            <Typography
+              variant="subtitle1"
+              ml={2}
+              sx={{
+                whiteSpace: "nowrap",
+                textOverflow: "ellipsis",
+                overflow: "hidden",
+              }}
+            >
               {title}
             </Typography>
           </Box>

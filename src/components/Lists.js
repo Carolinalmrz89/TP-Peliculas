@@ -16,8 +16,15 @@ const Lists = ({ title, url }) => {
   return (
     <Box
       sx={{
+        width: {
+          xs: "80%",
+          sm: "75%",
+          md: "45%",
+          lg: "42%",
+        },
         textAlign: "center",
         border: "1px solid #282828",
+        mb: 4,
       }}
     >
       <Typography
