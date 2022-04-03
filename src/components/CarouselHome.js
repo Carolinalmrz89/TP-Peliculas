@@ -49,8 +49,16 @@ const CarouselHome = () => {
               justifyContent: "center",
               alignItems: "center",
               width: "100%",
-              px: 28,
-              py: 3,
+              px: {
+                xs: 2,
+                sm: 4,
+                md: 6,
+              },
+              py: {
+                xs: 2,
+                sm: 4,
+                md: 6,
+              },
               bgcolor: "#000000b0",
               color: "white",
               fontWeight: "bold",
@@ -60,32 +68,44 @@ const CarouselHome = () => {
             <Typography variant="h5" gutterBottom>
               {movie.title}
             </Typography>
-            <Typography variant="body1" sx={{ textAlign: "justify" }}>
-              {movie.overview}
-            </Typography>
-
-            <Button
+            <Typography
               sx={{
-                mt: 4,
-                width: "190px",
-                ":hover": {
-                  bgcolor: "transparent",
+                textAlign: "justify",
+                fontSize: {
+                  xs: "12px",
+                  sm: "14px",
+                  md: "16px",
                 },
               }}
             >
-              <Link
-                to={`/movie-detail/${movie.id}`}
-                style={{
-                  textDecoration: "none",
-                  color: "white",
+              {movie.overview}
+            </Typography>
+            <Link
+              to={`/movie-detail/${movie.id}`}
+              style={{
+                textDecoration: "none",
+                color: "white",
+              }}
+            >
+              <Button
+                sx={{
+                  mt: 4,
+                  width: "300px",
+                  p: 0,
+                  ":hover": {
+                    bgcolor: "transparent",
+                  },
                 }}
               >
                 <IconButton
                   size="small"
                   sx={{
-                    ml: 4,
                     color: "white",
-                    fontSize: "16px",
+                    fontSize: {
+                      xs: "12px",
+                      sm: "14px",
+                      md: "16px",
+                    },
                     ":hover": {
                       bgcolor: "transparent",
                     },
@@ -93,11 +113,11 @@ const CarouselHome = () => {
                 >
                   More info{" "}
                   <ArrowForwardIosOutlinedIcon
-                    sx={{ width: "12px", color: "white", pl: 2 }}
+                    sx={{ width: "12px", color: "white", ml: 1 }}
                   />
                 </IconButton>
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </Box>
         </Paper>
       ))}

@@ -1,8 +1,8 @@
+import { useState, useEffect } from "react";
+import { urlBase, apiKey } from "../auxiliaries/Auxiliaries";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { useState, useEffect } from "react";
 import ListMovieItem from "./ListMovieItem";
-import { urlBase, apiKey } from "../auxiliaries/Auxiliaries";
 
 const Lists = ({ title, url }) => {
   const [movies, setMovies] = useState([]);
@@ -16,8 +16,15 @@ const Lists = ({ title, url }) => {
   return (
     <Box
       sx={{
+        width: {
+          xs: "80%",
+          sm: "75%",
+          md: "45%",
+          lg: "42%",
+        },
         textAlign: "center",
         border: "1px solid #282828",
+        mb: 4,
       }}
     >
       <Typography
