@@ -1,8 +1,8 @@
+import { useState, useEffect } from "react";
+import { urlBase, apiKey } from "../auxiliaries/Auxiliaries";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { useState, useEffect } from "react";
 import ListMovieItem from "./ListMovieItem";
-import { urlBase, apiKey } from "../auxiliaries/Auxiliaries";
 
 const Lists = ({ title, url }) => {
   const [movies, setMovies] = useState([]);
