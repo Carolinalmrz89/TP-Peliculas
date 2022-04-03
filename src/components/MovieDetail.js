@@ -30,7 +30,8 @@ const MovieDetail = () => {
         backgroundImage: `linear-gradient(rgb(0 0 0 / 66%), rgba(0, 0, 0, 0.5)), url(https://image.tmdb.org/t/p/original/${movieDetail.backdrop_path})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: "90vh",
+        backgroundPosition: "center",
+        minHeight: "90vh",
         display: "flex",
       }}
     >
@@ -41,10 +42,27 @@ const MovieDetail = () => {
           boxShadow: "none",
           display: "flex",
           alignItems: "center",
-          px: 16,
+          px: {
+            md: 12,
+            lg: 16,
+          },
+          mt: {
+            xs: 3,
+            sm: 6,
+            md: 0,
+          },
         }}
       >
-        <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: {
+              xs: "column",
+              md: "row",
+            },
+            alignItems: "center",
+          }}
+        >
           <Box>
             <CardMedia
               component="img"
@@ -52,12 +70,27 @@ const MovieDetail = () => {
               image={`https://image.tmdb.org/t/p/original/${movieDetail.poster_path}`}
             />
           </Box>
-          <CardContent sx={{ ml: 6 }}>
+          <CardContent
+            sx={{
+              ml: 6,
+              m: {
+                xs: 3,
+                sm: 8,
+                md: 2,
+              },
+            }}
+          >
             <Box sx={{ display: "flex", alignItems: "flex-end" }}>
               <Typography
                 variant="h4"
                 color="white"
-                sx={{ lineHeight: "initial" }}
+                sx={{
+                  lineHeight: "initial",
+                  fontSize: {
+                    xs: "28px",
+                    sm: "34px",
+                  },
+                }}
               >
                 {movieDetail.title}{" "}
               </Typography>
@@ -72,7 +105,11 @@ const MovieDetail = () => {
             <Typography
               variant="subtitle1"
               color="white"
-              sx={{ pt: 3, textAlign: "justify", fontWeight: 600 }}
+              sx={{
+                pt: 3,
+                textAlign: "justify",
+                fontWeight: 600,
+              }}
             >
               {movieDetail.overview}
             </Typography>

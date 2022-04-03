@@ -90,12 +90,8 @@ const CarouselHome = () => {
               <Button
                 sx={{
                   mt: 4,
-                  // mr: {
-                  //   xs: 1,
-                  //   sm: 2,
-                  //   md: 4,
-                  // },
                   width: "300px",
+                  p: 0,
                   ":hover": {
                     bgcolor: "transparent",
                   },
