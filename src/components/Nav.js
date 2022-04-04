@@ -5,21 +5,32 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import ResponsiveMenu from "./ResponsiveMenu";
+import { FaVideo } from "react-icons/fa";
+import { IconButton } from "@mui/material";
 
 const Nav = () => {
   return (
     <Box>
       <AppBar position="static" sx={{ bgcolor: "#282828", height: "10vh" }}>
         <Toolbar>
-          {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              color: "white",
+            }}
           >
-            <MenuIcon />
-          </IconButton> */}
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 1, fontSize: "22px" }}
+            >
+              <FaVideo />
+            </IconButton>
+          </Link>
+
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Buscador de películas
           </Typography>
