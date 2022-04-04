@@ -23,3 +23,7 @@ code {
   position: relative;
   padding-bottom: 56px;
 }
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  background-color: #282828;
+}
