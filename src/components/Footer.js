@@ -29,7 +29,11 @@ const Footer = () => {
         }}
       >
         <Box>
-          <Typography variant="h6" component="div" sx={{ color: "white" }}>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ color: "white", fontSize: "14px" }}
+          >
             {" "}
             LMRZ DEV - 2022
           </Typography>

@@ -26,6 +26,7 @@ const MovieDetail = () => {
 
   return (
     <Box
+      key={movieDetail.id}
       sx={{
         backgroundImage: `linear-gradient(rgb(0 0 0 / 66%), rgba(0, 0, 0, 0.5)), url(https://image.tmdb.org/t/p/original/${movieDetail.backdrop_path})`,
         backgroundRepeat: "no-repeat",
@@ -36,7 +37,6 @@ const MovieDetail = () => {
       }}
     >
       <Card
-        key={movieDetail.id}
         sx={{
           bgcolor: "transparent",
           boxShadow: "none",
@@ -122,6 +122,7 @@ const MovieDetail = () => {
                 {movieDetail.genres &&
                   movieDetail.genres.map((genre) => (
                     <Typography
+                      key={genre.id}
                       variant="subtitle1"
                       color="white"
                       sx={{
@@ -148,6 +149,7 @@ const MovieDetail = () => {
                 Rating:
               </Typography>
               <Rating
+                key={vote.id}
                 name="read-only"
                 value={vote && vote.vote_average / 2}
                 readOnly
