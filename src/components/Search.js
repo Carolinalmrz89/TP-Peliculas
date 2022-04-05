@@ -90,6 +90,7 @@ const Search = () => {
         {movies &&
           movies.map((movie) => (
             <MovieCard
+              key={movie.id}
               image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
               title={movie.title}
               link={`/movie-detail/${movie.id}`}
