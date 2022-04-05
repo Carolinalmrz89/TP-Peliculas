@@ -30,6 +30,7 @@ const CarouselHome = () => {
     >
       {movies.map((movie) => (
         <Paper
+          key={movie.id}
           sx={{
             backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`,
             backgroundRepeat: "no-repeat",
