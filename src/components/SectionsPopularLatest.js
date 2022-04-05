@@ -9,15 +9,16 @@ import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutl
 
 const SectionsPopularLatest = ({ title, url }) => {
   const [movies, setMovies] = useState([]);
+
   const [pageNumber, setPageNumber] = useState(1);
 
-  const handleClickPrevPage = () => {
-    setPageNumber(pageNumber - 1);
-  };
+  const [lastPage, setLastPage] = useState(0);
 
-  const handleClickNextPage = () => {
-    setPageNumber(pageNumber + 1);
-  };
+  const [showPagination, setShowPagination] = useState(false);
+
+  const handleClickPrevPage = () => setPageNumber(pageNumber - 1);
+
+  const handleClickNextPage = () => setPageNumber(pageNumber + 1);
 
   useEffect(() => {
     fetch(
@@ -26,6 +27,8 @@ const SectionsPopularLatest = ({ title, url }) => {
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results);
+        setLastPage(data.total_pages);
+        setShowPagination(data.total_pages > 1);
       });
   }, [pageNumber]);
 
@@ -55,17 +58,13 @@ const SectionsPopularLatest = ({ title, url }) => {
           />
         ))}
       </Box>
-      <Box sx={{ display: "flex" }}>
-        {pageNumber == 1 ? (
-          <Button
-            disabled
-            startIcon={<ArrowBackIosNewOutlinedIcon />}
-            sx={{ my: 2, mr: 3 }}
-          ></Button>
-        ) : (
+
+      {showPagination && (
+        <Box sx={{ display: "flex" }}>
           <Button
             startIcon={<ArrowBackIosNewOutlinedIcon />}
             onClick={handleClickPrevPage}
+            disabled={pageNumber == 1}
             sx={{
               my: 2,
               mr: 3,
@@ -77,30 +76,30 @@ const SectionsPopularLatest = ({ title, url }) => {
               },
             }}
           ></Button>
-        )}
 
-        <Typography
-          variant="h6"
-          component="div"
-          sx={{ m: 2, color: mainColor }}
-        >
-          Page {pageNumber}
-        </Typography>
-        <Button
-          endIcon={<ArrowForwardIosOutlinedIcon />}
-          onClick={handleClickNextPage}
-          sx={{
-            my: 2,
-            ml: 3,
-            color: mainColor,
-            ":hover": {
-              bgcolor: mainColor,
-              border: "`1px solid ${mainColor}`",
-              color: "white",
-            },
-          }}
-        ></Button>
-      </Box>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ m: 2, color: mainColor }}
+          >
+            Page {pageNumber}
+          </Typography>
+          <Button
+            endIcon={<ArrowForwardIosOutlinedIcon />}
+            onClick={handleClickNextPage}
+            sx={{
+              my: 2,
+              ml: 3,
+              color: mainColor,
+              ":hover": {
+                bgcolor: mainColor,
+                border: "`1px solid ${mainColor}`",
+                color: "white",
+              },
+            }}
+          ></Button>
+        </Box>
+      )}
     </Box>
   );
 };
