@@ -1,10 +1,11 @@
+import { Box } from "@mui/material";
 import SectionsPopularLatest from "./SectionsPopularLatest";
 
 const NewMovies = () => {
   return (
-    <div>
+    <Box>
       <SectionsPopularLatest title="Últimos lanzamientos" url="now_playing" />
-    </div>
+    </Box>
   );
 };
 

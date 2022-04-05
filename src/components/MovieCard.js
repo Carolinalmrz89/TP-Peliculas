@@ -51,19 +51,17 @@ const MovieCard = ({ image, title, link }) => {
         </CardContent>
 
         <CardActions sx={{ p: 0 }}>
-          <Link to={link}>
-            <IconButton
-              sx={{
-                p: 0,
-                ":hover": {
-                  color: "#282828",
-                  bgcolor: "transparent",
-                },
-              }}
-            >
-              <ArrowForwardIosOutlinedIcon sx={{ width: "16px" }} />
-            </IconButton>
-          </Link>
+          <IconButton
+            sx={{
+              p: 0,
+              ":hover": {
+                color: "#282828",
+                bgcolor: "transparent",
+              },
+            }}
+          >
+            <ArrowForwardIosOutlinedIcon sx={{ width: "16px" }} />
+          </IconButton>
         </CardActions>
       </Card>
     </Link>
