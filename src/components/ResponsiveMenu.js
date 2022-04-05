@@ -4,6 +4,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import Box from "@mui/material/Box";
 import * as React from "react";
 
 const ResponsiveMenu = () => {
@@ -17,24 +18,24 @@ const ResponsiveMenu = () => {
   };
 
   return (
-    <div>
-      <Button
+    <Box>
+      {/* <Button
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+      > */}
+      <IconButton
+        size="large"
+        edge="start"
+        color="inherit"
+        aria-label="menu"
+        sx={{ mr: 2, color: "white" }}
       >
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2, color: "white" }}
-        >
-          <MenuIcon />
-        </IconButton>
-      </Button>
+        <MenuIcon />
+      </IconButton>
+      {/* </Button> */}
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
@@ -109,7 +110,7 @@ const ResponsiveMenu = () => {
           </Link>
         </MenuItem>
       </Menu>
-    </div>
+    </Box>
   );
 };
 

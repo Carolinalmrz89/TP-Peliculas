@@ -88,7 +88,7 @@ const CarouselHome = () => {
                 color: "white",
               }}
             >
-              <Button
+              {/* <Button
                 sx={{
                   mt: 4,
                   width: "300px",
@@ -97,27 +97,27 @@ const CarouselHome = () => {
                     bgcolor: "transparent",
                   },
                 }}
+              > */}
+              <IconButton
+                size="small"
+                sx={{
+                  color: "white",
+                  fontSize: {
+                    xs: "12px",
+                    sm: "14px",
+                    md: "16px",
+                  },
+                  ":hover": {
+                    bgcolor: "transparent",
+                  },
+                }}
               >
-                <IconButton
-                  size="small"
-                  sx={{
-                    color: "white",
-                    fontSize: {
-                      xs: "12px",
-                      sm: "14px",
-                      md: "16px",
-                    },
-                    ":hover": {
-                      bgcolor: "transparent",
-                    },
-                  }}
-                >
-                  More info{" "}
-                  <ArrowForwardIosOutlinedIcon
-                    sx={{ width: "12px", color: "white", ml: 1 }}
-                  />
-                </IconButton>
-              </Button>
+                More info{" "}
+                <ArrowForwardIosOutlinedIcon
+                  sx={{ width: "12px", color: "white", ml: 1 }}
+                />
+              </IconButton>
+              {/* </Button> */}
             </Link>
           </Box>
         </Paper>
