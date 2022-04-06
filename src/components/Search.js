@@ -55,11 +55,25 @@ const Search = () => {
   };
 
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Box sx={{ display: "flex", justifyContent: "center", m: 5 }}>
         <Paper
           component="form"
-          sx={{ p: "2px 4px", width: 400, display: "flex" }}
+          sx={{
+            p: "2px 4px",
+            width: {
+              xs: "65vw",
+              md: "50vw",
+            },
+            display: "flex",
+          }}
         >
           <InputBase
             sx={{ ml: 1, flex: 1 }}

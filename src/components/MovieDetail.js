@@ -148,15 +148,19 @@ const MovieDetail = () => {
               <Typography variant="h6" color="white" sx={{ pt: 3 }}>
                 Rating:
               </Typography>
-              <Rating
-                key={vote.id}
-                name="read-only"
-                value={vote && vote.vote_average / 2}
-                readOnly
-                color="yellow"
-                sx={{ mt: 1 }}
-              />
-              <Typography color="white">{movieDetail.vote_average} </Typography>
+              <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+                <Rating
+                  key={vote.id}
+                  name="read-only"
+                  value={vote && vote.vote_average / 2}
+                  readOnly
+                  color="yellow"
+                  sx={{ mt: 1 }}
+                />
+                <Typography color="white" sx={{ pl: 1, lineHeight: 1.2 }}>
+                  ({movieDetail.vote_average})
+                </Typography>
+              </Box>
             </Box>
           </CardContent>
         </Box>

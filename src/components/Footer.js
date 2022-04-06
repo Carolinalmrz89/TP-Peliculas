@@ -43,14 +43,14 @@ const Footer = () => {
             <BottomNavigationAction
               label="Recents"
               icon={<GitHubIcon />}
-              sx={{ color: "white", p: 0, pt: 2, fontSize: "30pxs" }}
+              sx={{ color: "white", p: 0, pt: 2 }}
             />
           </Link>
           <Link href="https://www.linkedin.com/in/carolina-almaraz/">
             <BottomNavigationAction
               label="Recents"
               icon={<LinkedInIcon />}
-              sx={{ color: "white", p: 0, pt: 2, fontSize: "30pxs" }}
+              sx={{ color: "white", p: 0, pt: 2, minWidth: 0 }}
             />
           </Link>
         </Box>
