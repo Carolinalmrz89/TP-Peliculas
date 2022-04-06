@@ -11,7 +11,7 @@ const Lists = ({ title, url }) => {
     fetch(`${urlBase}${url}?api_key=${apiKey}`)
       .then((res) => res.json())
       .then((data) => setMovies(data.results));
-  }, []);
+  }, [url]);
 
   return (
     <Box
@@ -24,7 +24,6 @@ const Lists = ({ title, url }) => {
         },
         textAlign: "center",
         border: "1px solid #282828",
-        mb: 4,
       }}
     >
       <Typography
