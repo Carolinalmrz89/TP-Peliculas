@@ -88,16 +88,6 @@ const CarouselHome = () => {
                 color: "white",
               }}
             >
-              {/* <Button
-                sx={{
-                  mt: 4,
-                  width: "300px",
-                  p: 0,
-                  ":hover": {
-                    bgcolor: "transparent",
-                  },
-                }}
-              > */}
               <IconButton
                 size="small"
                 sx={{
@@ -107,6 +97,7 @@ const CarouselHome = () => {
                     sm: "14px",
                     md: "16px",
                   },
+                  mt: 4,
                   ":hover": {
                     bgcolor: "transparent",
                   },
@@ -117,7 +108,6 @@ const CarouselHome = () => {
                   sx={{ width: "12px", color: "white", ml: 1 }}
                 />
               </IconButton>
-              {/* </Button> */}
             </Link>
           </Box>
         </Paper>

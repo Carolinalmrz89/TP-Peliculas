@@ -19,14 +19,12 @@ const ResponsiveMenu = () => {
 
   return (
     <Box>
-      {/* <Button
+      <IconButton
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-      > */}
-      <IconButton
         size="large"
         edge="start"
         color="inherit"
@@ -35,7 +33,7 @@ const ResponsiveMenu = () => {
       >
         <MenuIcon />
       </IconButton>
-      {/* </Button> */}
+
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}

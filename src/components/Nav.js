@@ -11,7 +11,10 @@ import { IconButton } from "@mui/material";
 const Nav = () => {
   return (
     <Box>
-      <AppBar position="static" sx={{ bgcolor: "#282828", height: "10vh" }}>
+      <AppBar
+        position="static"
+        sx={{ justifyContent: "center", bgcolor: "#282828", height: "10vh" }}
+      >
         <Toolbar>
           <Link
             to="/"
@@ -25,7 +28,7 @@ const Nav = () => {
               edge="start"
               color="inherit"
               aria-label="menu"
-              sx={{ mr: 1, fontSize: "22px" }}
+              sx={{ fontSize: "22px" }}
             >
               <FaVideo />
             </IconButton>
