@@ -43,73 +43,79 @@ const Nav = () => {
               },
             }}
           >
-            <Button
-              sx={{
-                mr: 3,
-                ":hover": {
-                  bgcolor: "#1e1d1dde",
-                  py: "15px",
-                },
+            <Link
+              to="/"
+              style={{
+                textDecoration: "none",
+                color: "white",
               }}
             >
-              <Link
-                to="/"
-                style={{
-                  textDecoration: "none",
+              <Button
+                sx={{
+                  mr: 3,
                   color: "white",
+                  ":hover": {
+                    bgcolor: "#1e1d1dde",
+                    py: "15px",
+                  },
                 }}
               >
                 Home
-              </Link>
-            </Button>
-            <Button
-              sx={{
-                mr: 3,
-                ":hover": {
-                  bgcolor: "#1e1d1dde",
-                  py: "15px",
-                },
-              }}
+              </Button>
+            </Link>
+
+            <Link
+              to="/new-movies"
+              style={{ textDecoration: "none", color: "white" }}
             >
-              <Link
-                to="/new-movies"
-                style={{ textDecoration: "none", color: "white" }}
+              <Button
+                sx={{
+                  mr: 3,
+                  color: "white",
+                  ":hover": {
+                    bgcolor: "#1e1d1dde",
+                    py: "15px",
+                  },
+                }}
               >
                 Ultimos Lanzamientos
-              </Link>
-            </Button>
-            <Button
-              sx={{
-                mr: 3,
-                ":hover": {
-                  bgcolor: "#1e1d1dde",
-                  py: "15px",
-                },
-              }}
+              </Button>
+            </Link>
+
+            <Link
+              to="/popular"
+              style={{ textDecoration: "none", color: "white" }}
             >
-              <Link
-                to="/popular"
-                style={{ textDecoration: "none", color: "white" }}
+              <Button
+                sx={{
+                  mr: 3,
+                  color: "white",
+                  ":hover": {
+                    bgcolor: "#1e1d1dde",
+                    py: "15px",
+                  },
+                }}
               >
                 Populares
-              </Link>
-            </Button>
-            <Button
-              sx={{
-                mr: 3,
-                ":hover": {
-                  bgcolor: "#1e1d1dde",
-                  py: "15px",
-                },
-              }}
+              </Button>
+            </Link>
+            <Link
+              to="/search"
+              style={{ textDecoration: "none", color: "white" }}
             >
-              <Link
-                to="/search"
-                style={{ textDecoration: "none", color: "white" }}
+              <Button
+                sx={{
+                  mr: 3,
+                  color: "white",
+                  ":hover": {
+                    bgcolor: "#1e1d1dde",
+                    py: "15px",
+                  },
+                }}
               >
                 Buscar
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </Box>
 
           <Box

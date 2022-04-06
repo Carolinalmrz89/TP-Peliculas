@@ -65,7 +65,7 @@ const SectionsPopularLatest = ({ title, url }) => {
           <Button
             startIcon={<ArrowBackIosNewOutlinedIcon />}
             onClick={handleClickPrevPage}
-            disabled={pageNumber == 1}
+            disabled={pageNumber === 1}
             sx={{
               my: 2,
               mr: 3,
@@ -74,6 +74,7 @@ const SectionsPopularLatest = ({ title, url }) => {
                 bgcolor: mainColor,
                 border: `1px solid ${mainColor}`,
                 color: "white",
+                p: 0,
               },
             }}
           ></Button>
@@ -88,6 +89,7 @@ const SectionsPopularLatest = ({ title, url }) => {
           <Button
             endIcon={<ArrowForwardIosOutlinedIcon />}
             onClick={handleClickNextPage}
+            disabled={pageNumber === lastPage}
             sx={{
               my: 2,
               ml: 3,
@@ -96,6 +98,7 @@ const SectionsPopularLatest = ({ title, url }) => {
                 bgcolor: mainColor,
                 border: "`1px solid ${mainColor}`",
                 color: "white",
+                p: 0,
               },
             }}
           ></Button>
