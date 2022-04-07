@@ -38,6 +38,7 @@ const Lists = ({ title, url }) => {
         sx={{
           height: "400px",
           overflowY: "scroll",
+          bgcolor: "white",
         }}
       >
         {movies.map((movie) => (
