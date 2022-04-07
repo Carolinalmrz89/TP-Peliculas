@@ -1,11 +1,17 @@
-# PROYECTO EN PROCESO
----
 
-# ✦ Proyecto: ****
+# ✦ Proyecto: **Buscador de películas**
 
 Proyecto final del Bootcamp de Desarrollo Web Front End, dictado por AdaITW. La propuesta consiste en crear una aplicación que permita listar información sobre películas, comunicándote con la API https://api.themoviedb.org/3/movie/ 
 
 ---
+## Website
+
+[Click aquí para ver la página](https://lmrz-prime.netlify.app/)
+
+---
+**Vista previa**
+---
+![portada](https://user-images.githubusercontent.com/75865332/162109925-272b23c8-d712-406d-939e-de859f9a1bf0.png)
 
 ## Funcionalidad
 
