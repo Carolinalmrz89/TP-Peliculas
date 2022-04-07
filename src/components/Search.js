@@ -32,17 +32,19 @@ const Search = () => {
   const handleClickNextPage = () => setPageNumber(pageNumber + 1);
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${searchParams.get(
-        "query"
-      )}&page=${pageNumber}`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setMovies(data.results);
-        setLastPage(data.total_pages);
-        setShowPagination(data.total_pages > 1);
-      });
+    if (searchParams.get("query")) {
+      fetch(
+        `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${searchParams.get(
+          "query"
+        )}&page=${pageNumber}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setMovies(data.results);
+          setLastPage(data.total_pages);
+          setShowPagination(data.total_pages > 1);
+        });
+    }
   }, [searchParams, pageNumber]);
 
   const handleChange = (e) => setValorDelInput(e.target.value);
