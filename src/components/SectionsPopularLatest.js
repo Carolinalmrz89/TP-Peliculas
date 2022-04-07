@@ -40,7 +40,11 @@ const SectionsPopularLatest = ({ title, url }) => {
         alignItems: "center",
       }}
     >
-      <Typography variant="h5" gutterBottom sx={{ p: 3, fontWeight: "bold" }}>
+      <Typography
+        variant="h5"
+        gutterBottom
+        sx={{ p: 3, fontWeight: "bold", color: "white" }}
+      >
         {title}
       </Typography>
       <Box
@@ -69,7 +73,7 @@ const SectionsPopularLatest = ({ title, url }) => {
             sx={{
               my: 2,
               mr: 3,
-              color: mainColor,
+              color: "white",
               ":hover": {
                 bgcolor: mainColor,
                 border: `1px solid ${mainColor}`,
@@ -82,7 +86,7 @@ const SectionsPopularLatest = ({ title, url }) => {
           <Typography
             variant="h6"
             component="div"
-            sx={{ m: 2, color: mainColor }}
+            sx={{ m: 2, color: "white" }}
           >
             Page {pageNumber}
           </Typography>
@@ -93,7 +97,7 @@ const SectionsPopularLatest = ({ title, url }) => {
             sx={{
               my: 2,
               ml: 3,
-              color: mainColor,
+              color: "white",
               ":hover": {
                 bgcolor: mainColor,
                 border: "`1px solid ${mainColor}`",

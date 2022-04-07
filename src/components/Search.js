@@ -121,7 +121,7 @@ const Search = () => {
             sx={{
               my: 2,
               mr: 3,
-              color: mainColor,
+              color: "white",
               ":hover": {
                 bgcolor: mainColor,
                 border: `1px solid ${mainColor}`,
@@ -133,7 +133,7 @@ const Search = () => {
           <Typography
             variant="h6"
             component="div"
-            sx={{ m: 2, color: mainColor }}
+            sx={{ m: 2, color: "white" }}
           >
             Page {pageNumber}
           </Typography>
@@ -144,7 +144,7 @@ const Search = () => {
             sx={{
               my: 2,
               ml: 3,
-              color: mainColor,
+              color: "white",
               ":hover": {
                 bgcolor: mainColor,
                 border: "`1px solid ${mainColor}`",

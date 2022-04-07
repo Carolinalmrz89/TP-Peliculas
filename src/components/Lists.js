@@ -24,11 +24,11 @@ const Lists = ({ title, url }) => {
         },
         textAlign: "center",
         border: "1px solid #282828",
+        mb: 5,
       }}
     >
       <Typography
-        variant="h5"
-        gutterBottom
+        variant="h6"
         sx={{ bgcolor: "#282828", color: "white", p: 1 }}
       >
         {title}
@@ -38,6 +38,7 @@ const Lists = ({ title, url }) => {
         sx={{
           height: "400px",
           overflowY: "scroll",
+          bgcolor: "white",
         }}
       >
         {movies.map((movie) => (

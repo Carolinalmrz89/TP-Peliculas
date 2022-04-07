@@ -47,7 +47,6 @@ const ListMovieItem = ({ image, title, link }) => {
             <IconButton
               size="small"
               sx={{
-                ml: 4,
                 ":hover": {
                   color: "#282828",
                   bgcolor: "transparent",
