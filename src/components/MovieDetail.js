@@ -22,7 +22,7 @@ const MovieDetail = () => {
         setMovieDetail(data);
         setVote(data);
       });
-  }, []);
+  }, [params.idMovie]);
 
   return (
     <Box
@@ -131,7 +131,6 @@ const MovieDetail = () => {
                         py: "4px",
                         textAlign: "justify",
                         fontWeight: 600,
-                        border: "1px solid gray",
                         mr: "10px",
                         mt: "10px",
                         borderRadius: "5px",

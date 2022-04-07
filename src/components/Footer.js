@@ -1,7 +1,6 @@
 import Paper from "@mui/material/Paper";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import RestoreIcon from "@mui/icons-material/Restore";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import { mainColor } from "../auxiliaries/Auxiliaries";

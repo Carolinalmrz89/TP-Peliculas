@@ -1,7 +1,6 @@
 import CarouselHome from "./CarouselHome";
 import Lists from "./Lists";
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
 
 const Main = () => {
   return (

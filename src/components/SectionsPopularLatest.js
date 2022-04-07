@@ -30,7 +30,7 @@ const SectionsPopularLatest = ({ title, url }) => {
         setLastPage(data.total_pages);
         setShowPagination(data.total_pages > 1);
       });
-  }, [pageNumber]);
+  }, [url, pageNumber]);
 
   return (
     <Box
@@ -100,7 +100,7 @@ const SectionsPopularLatest = ({ title, url }) => {
               color: "white",
               ":hover": {
                 bgcolor: mainColor,
-                border: "`1px solid ${mainColor}`",
+                border: `1px solid ${mainColor}`,
                 color: "white",
                 p: 0,
               },

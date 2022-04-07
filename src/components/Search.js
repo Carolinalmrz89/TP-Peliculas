@@ -147,7 +147,7 @@ const Search = () => {
               color: "white",
               ":hover": {
                 bgcolor: mainColor,
-                border: "`1px solid ${mainColor}`",
+                border: `1px solid ${mainColor}`,
                 color: "white",
               },
             }}
