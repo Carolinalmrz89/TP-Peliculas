@@ -52,6 +52,9 @@ const SectionsPopularLatest = ({ title, url }) => {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
+          maxWidth: {
+            lg: "1330px",
+          },
         }}
       >
         {movies.map((movie) => (

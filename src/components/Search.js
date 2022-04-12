@@ -74,6 +74,9 @@ const Search = () => {
               xs: "65vw",
               md: "50vw",
             },
+            maxWidth: {
+              lg: "675px",
+            },
             display: "flex",
           }}
         >

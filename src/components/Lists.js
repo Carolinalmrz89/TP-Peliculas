@@ -22,6 +22,9 @@ const Lists = ({ title, url }) => {
           md: "45%",
           lg: "42%",
         },
+        maxWidth: {
+          lg: "555px",
+        },
         textAlign: "center",
         border: "1px solid #282828",
         mb: 5,
