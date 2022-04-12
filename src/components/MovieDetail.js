@@ -34,6 +34,7 @@ const MovieDetail = () => {
         backgroundPosition: "center",
         minHeight: "90vh",
         display: "flex",
+        justifyContent: "center",
       }}
     >
       <Card
@@ -59,6 +60,9 @@ const MovieDetail = () => {
             flexDirection: {
               xs: "column",
               md: "row",
+            },
+            maxWidth: {
+              lg: "1080px",
             },
             alignItems: "center",
           }}
